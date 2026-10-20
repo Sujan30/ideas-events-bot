@@ -62,7 +62,7 @@ async function main() {
     partials: [Partials.Message, Partials.Channel],
   });
 
-  client.once('ready', () => {
+  client.once('clientReady', () => {
     log('discord', `logged in as ${client.user.tag}`, { watchingChannel: DISCORD_CHANNEL_ID });
     const channel = client.channels.cache.get(DISCORD_CHANNEL_ID);
     log('discord', channel ? 'watched channel is visible' : 'WATCHED CHANNEL NOT VISIBLE TO BOT (check channel id / permissions)', {
